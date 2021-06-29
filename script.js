@@ -1,14 +1,14 @@
 const main = document.querySelector('main')
-const gname = ""
 const header = document.querySelector('thead')
 const spinner = document.querySelector('.loader')
 const posts = document.getElementById('user_post')
 let btnid = 1
 const tbodyRef = document.querySelector('table').getElementsByTagName('tbody')[0];
 const table = document.querySelector('table')
-table.style.display = "none"
-posts.style.display = 'none'
+main.style.display = "none"
 posts.setAttribute('id', 'user_post')
+
+//fetch users on load
 window.addEventListener('load', (event) => {
   fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
@@ -16,8 +16,7 @@ window.addEventListener('load', (event) => {
       if (!data) {
         throw new Error()
       }
-      table.style.display = 'block'
-      posts.style.display = 'block'
+      main.style.display = 'flex'
       spinner.style.display = 'none'
       data.forEach(element => {
         const { name, email, id, phone, website, company } = element
@@ -33,7 +32,7 @@ window.addEventListener('load', (event) => {
         cell1.innerHTML = name;
         cell2.innerHTML = email;
         cell3.appendChild(btn)
-
+        //fetch posts on button click event
         btn.addEventListener('click', (e) => {
           fetch(`https://jsonplaceholder.typicode.com/posts?userId=${e.target.id}`)
             .then(response => response.json().then((posts) => {
