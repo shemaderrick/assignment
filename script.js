@@ -1,6 +1,7 @@
 const main = document.querySelector('main')
 const gname = ""
 const header = document.querySelector('thead')
+const spinner = document.querySelector('.loader')
 const posts = document.getElementById('user_post')
 let btnid = 1
 const tbodyRef = document.querySelector('table').getElementsByTagName('tbody')[0];
@@ -17,6 +18,7 @@ window.addEventListener('load', (event) => {
       }
       table.style.display = 'block'
       posts.style.display = 'block'
+      spinner.style.display = 'none'
       data.forEach(element => {
         const { name, email, id, phone, website, company } = element
 

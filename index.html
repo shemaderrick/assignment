@@ -8,26 +8,33 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main>
-      <div id="table_container">
-        <table class="table_content">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Posts</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
-      <div class="post_container">
-        <div id="user_details"></div>
-        <div id="user_post">
-          <h3>User's Posts</h3>
+    <div class="loader">
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+
+    <div class="main-container">
+      <main>
+        <div id="table_container">
+          <table class="table_content">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Posts</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
         </div>
-      </div>
-    </main>
+        <div class="post_container">
+          <div id="user_details"></div>
+          <div id="user_post">
+            <h3>User's Posts</h3>
+          </div>
+        </div>
+      </main>
+    </div>
 
     <script src="script.js"></script>
   </body>

@@ -5,6 +5,11 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
 }
 main {
   display: flex;
@@ -70,4 +75,37 @@ button {
   text-align: center;
   text-decoration: none;
   /* display: inline-block; */
+}
+.loader {
+  position: fixed;
+  left: 40%;
+  top: 20%;
+  margin: auto;
+  z-index: 0;
+
+  height: 50px;
+  animation: rotate 3s linear infinite;
+}
+.circle {
+  background-color: #009879;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  animation: grow 1.5s linear infinite;
+  transform: scale(0);
+  margin: -10px;
+}
+.circle:nth-child(2) {
+  background-color: #c060a1;
+  animation-delay: 0.7s;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes grow {
+  50% {
+    transform: scale(1);
+  }
 }
