@@ -74,7 +74,7 @@ button {
   border-radius: 0.2rem;
   text-align: center;
   text-decoration: none;
-  /* display: inline-block; */
+  cursor: pointer;
 }
 .loader {
   position: fixed;
